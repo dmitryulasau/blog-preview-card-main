@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Figtree", sans-serif;
+}
+
+:root {
+  /* Colors */
+  --white: #ffffff;
+  --yellow: #f4d04e;
+  --gray-500: #6b6b6b;
+  --gray-950: #111111;
+}
