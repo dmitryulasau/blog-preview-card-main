@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  /* background-color: var(--yellow); */
+  background-color: var(--yellow);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -30,43 +30,60 @@ body {
 }
 
 .card {
+  background-color: var(--white);
   padding: 24px;
+  border-radius: 20px;
   height: 522px;
   max-width: 384px;
   width: 100%;
+  border: 1px solid var(--gray-950);
+  box-shadow: 8px 8px 0 #000000;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card__image-container {
+  max-width: 336px;
+  width: 100%;
+  min-height: 200px;
 }
 
 .card__image {
-  max-width: 336px;
-  width: 100%;
   border-radius: 10px;
-  margin-bottom: 24px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
+.card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
 .card__tag {
   display: inline-block;
   font-weight: 800;
   padding: 4px 12px;
   background-color: var(--yellow);
   border-radius: 4px;
-  margin-bottom: 12px;
 }
 
 .card__date {
   display: block;
-  margin-bottom: 12px;
 }
 
 .card__heading {
   font-size: 24px;
   font-weight: 800;
-  margin-bottom: 12px;
+  line-height: 150%;
 }
 
 .card__text {
   font-size: 16px;
   color: var(--gray-500);
-  margin-bottom: 24px;
+  line-height: 150%;
 }
 
 .card__author {
@@ -82,4 +99,35 @@ body {
 
 .card__author-name {
   font-weight: 800;
+}
+
+@media (max-width: 375px) {
+  .card {
+    height: 501px;
+    max-width: 327px;
+  }
+
+  .card__image-container {
+    max-width: 280px;
+  }
+
+  .card__info {
+    gap: 10px;
+  }
+
+  .card__tag {
+    font-size: 12px;
+  }
+
+  .card__date {
+    font-size: 12px;
+  }
+
+  .card__heading {
+    font-size: 20px;
+  }
+
+  .card__text {
+    font-size: 14px;
+  }
 }
